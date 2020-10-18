@@ -1,0 +1,55 @@
+C:\Users\tanth\Downloads\HidLibrary-master\examples\MagtekCardReader\bin\Debug\MagtekCardReader.exe.config
+C:\Users\tanth\Downloads\HidLibrary-master\examples\MagtekCardReader\bin\Debug\MagtekCardReader.exe
+C:\Users\tanth\Downloads\HidLibrary-master\examples\MagtekCardReader\bin\Debug\MagtekCardReader.pdb
+C:\Users\tanth\Downloads\HidLibrary-master\examples\MagtekCardReader\bin\Debug\HidLibrary.dll
+C:\Users\tanth\Downloads\HidLibrary-master\examples\MagtekCardReader\bin\Debug\Theraot.Core.dll
+C:\Users\tanth\Downloads\HidLibrary-master\examples\MagtekCardReader\bin\Debug\HidLibrary.pdb
+C:\Users\tanth\Downloads\HidLibrary-master\examples\MagtekCardReader\obj\x86\Debug\MagtekCardReader.csproj.CoreCompileInputs.cache
+C:\Users\tanth\Downloads\HidLibrary-master\examples\MagtekCardReader\obj\x86\Debug\MagtekCardReader.csproj.CopyComplete
+C:\Users\tanth\Downloads\HidLibrary-master\examples\MagtekCardReader\obj\x86\Debug\MagtekCardReader.exe
+C:\Users\tanth\Downloads\HidLibrary-master\examples\MagtekCardReader\obj\x86\Debug\MagtekCardReader.pdb
+C:\Users\tanth\Downloads\HidLibrary-master\examples\MagtekCardReader\obj\x86\Debug\MagtekCardReader.csprojAssemblyReference.cache
+C:\Users\tanth\Desktop\Sample\MagtekCardReader\bin\Debug\MagtekCardReader.exe.config
+C:\Users\tanth\Desktop\Sample\MagtekCardReader\bin\Debug\MagtekCardReader.exe
+C:\Users\tanth\Desktop\Sample\MagtekCardReader\bin\Debug\MagtekCardReader.pdb
+C:\Users\tanth\Desktop\Sample\MagtekCardReader\bin\Debug\HidLibrary.dll
+C:\Users\tanth\Desktop\Sample\MagtekCardReader\bin\Debug\Theraot.Core.dll
+C:\Users\tanth\Desktop\Sample\MagtekCardReader\bin\Debug\HidLibrary.pdb
+C:\Users\tanth\Desktop\Sample\MagtekCardReader\obj\x86\Debug\MagtekCardReader.csprojAssemblyReference.cache
+C:\Users\tanth\Desktop\Sample\MagtekCardReader\obj\x86\Debug\MagtekCardReader.csproj.CoreCompileInputs.cache
+C:\Users\tanth\Desktop\Sample\MagtekCardReader\obj\x86\Debug\MagtekCardReader.csproj.CopyComplete
+C:\Users\tanth\Desktop\Sample\MagtekCardReader\obj\x86\Debug\MagtekCardReader.exe
+C:\Users\tanth\Desktop\Sample\MagtekCardReader\obj\x86\Debug\MagtekCardReader.pdb
+D:\Hoctap\Cong nghe phat trien phan mem tien tien\Sample\Sample\MagtekCardReader\bin\Debug\MagtekCardReader.exe.config
+D:\Hoctap\Cong nghe phat trien phan mem tien tien\Sample\Sample\MagtekCardReader\bin\Debug\MagtekCardReader.exe
+D:\Hoctap\Cong nghe phat trien phan mem tien tien\Sample\Sample\MagtekCardReader\bin\Debug\MagtekCardReader.pdb
+D:\Hoctap\Cong nghe phat trien phan mem tien tien\Sample\Sample\MagtekCardReader\bin\Debug\HidLibrary.dll
+D:\Hoctap\Cong nghe phat trien phan mem tien tien\Sample\Sample\MagtekCardReader\bin\Debug\Theraot.Core.dll
+D:\Hoctap\Cong nghe phat trien phan mem tien tien\Sample\Sample\MagtekCardReader\bin\Debug\HidLibrary.pdb
+D:\Hoctap\Cong nghe phat trien phan mem tien tien\Sample\Sample\MagtekCardReader\obj\x86\Debug\MagtekCardReader.csprojAssemblyReference.cache
+D:\Hoctap\Cong nghe phat trien phan mem tien tien\Sample\Sample\MagtekCardReader\obj\x86\Debug\MagtekCardReader.csproj.CoreCompileInputs.cache
+D:\Hoctap\Cong nghe phat trien phan mem tien tien\Sample\Sample\MagtekCardReader\obj\x86\Debug\MagtekCardReader.csproj.CopyComplete
+D:\Hoctap\Cong nghe phat trien phan mem tien tien\Sample\Sample\MagtekCardReader\obj\x86\Debug\MagtekCardReader.exe
+D:\Hoctap\Cong nghe phat trien phan mem tien tien\Sample\Sample\MagtekCardReader\obj\x86\Debug\MagtekCardReader.pdb
+D:\Hoctap\cnptpmtt\Sample\Sample\MagtekCardReader\bin\Debug\MagtekCardReader.exe.config
+D:\Hoctap\cnptpmtt\Sample\Sample\MagtekCardReader\bin\Debug\MagtekCardReader.exe
+D:\Hoctap\cnptpmtt\Sample\Sample\MagtekCardReader\bin\Debug\MagtekCardReader.pdb
+D:\Hoctap\cnptpmtt\Sample\Sample\MagtekCardReader\bin\Debug\HidLibrary.dll
+D:\Hoctap\cnptpmtt\Sample\Sample\MagtekCardReader\bin\Debug\Theraot.Core.dll
+D:\Hoctap\cnptpmtt\Sample\Sample\MagtekCardReader\bin\Debug\HidLibrary.pdb
+D:\Hoctap\cnptpmtt\Sample\Sample\MagtekCardReader\obj\x86\Debug\MagtekCardReader.csprojAssemblyReference.cache
+D:\Hoctap\cnptpmtt\Sample\Sample\MagtekCardReader\obj\x86\Debug\MagtekCardReader.csproj.CoreCompileInputs.cache
+D:\Hoctap\cnptpmtt\Sample\Sample\MagtekCardReader\obj\x86\Debug\MagtekCardReader.csproj.CopyComplete
+D:\Hoctap\cnptpmtt\Sample\Sample\MagtekCardReader\obj\x86\Debug\MagtekCardReader.exe
+D:\Hoctap\cnptpmtt\Sample\Sample\MagtekCardReader\obj\x86\Debug\MagtekCardReader.pdb
+C:\Users\UwU\source\repos\Ticket\Ticket\MagtekCardReader\bin\Debug\MagtekCardReader.exe.config
+C:\Users\UwU\source\repos\Ticket\Ticket\MagtekCardReader\bin\Debug\MagtekCardReader.exe
+C:\Users\UwU\source\repos\Ticket\Ticket\MagtekCardReader\bin\Debug\MagtekCardReader.pdb
+C:\Users\UwU\source\repos\Ticket\Ticket\MagtekCardReader\bin\Debug\HidLibrary.dll
+C:\Users\UwU\source\repos\Ticket\Ticket\MagtekCardReader\bin\Debug\Theraot.Core.dll
+C:\Users\UwU\source\repos\Ticket\Ticket\MagtekCardReader\bin\Debug\HidLibrary.pdb
+C:\Users\UwU\source\repos\Ticket\Ticket\MagtekCardReader\obj\x86\Debug\MagtekCardReader.csprojAssemblyReference.cache
+C:\Users\UwU\source\repos\Ticket\Ticket\MagtekCardReader\obj\x86\Debug\MagtekCardReader.csproj.CoreCompileInputs.cache
+C:\Users\UwU\source\repos\Ticket\Ticket\MagtekCardReader\obj\x86\Debug\MagtekCardReader.csproj.CopyComplete
+C:\Users\UwU\source\repos\Ticket\Ticket\MagtekCardReader\obj\x86\Debug\MagtekCardReader.exe
+C:\Users\UwU\source\repos\Ticket\Ticket\MagtekCardReader\obj\x86\Debug\MagtekCardReader.pdb
