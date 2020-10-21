@@ -48,7 +48,7 @@
             this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtUsername.Location = new System.Drawing.Point(96, 201);
+            this.txtUsername.Location = new System.Drawing.Point(96, 156);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(364, 23);
             this.txtUsername.TabIndex = 2;
@@ -62,7 +62,7 @@
             this.txtPwd.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPwd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPwd.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtPwd.Location = new System.Drawing.Point(96, 241);
+            this.txtPwd.Location = new System.Drawing.Point(96, 196);
             this.txtPwd.Name = "txtPwd";
             this.txtPwd.PasswordChar = '*';
             this.txtPwd.Size = new System.Drawing.Size(364, 23);
@@ -74,7 +74,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(177)))), ((int)(((byte)(138)))));
-            this.panel1.Location = new System.Drawing.Point(60, 227);
+            this.panel1.Location = new System.Drawing.Point(60, 182);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(400, 4);
@@ -93,7 +93,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Ticket.Properties.Resources.lock_solid;
-            this.pictureBox2.Location = new System.Drawing.Point(60, 234);
+            this.pictureBox2.Location = new System.Drawing.Point(60, 189);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(30, 30);
             this.pictureBox2.TabIndex = 7;
@@ -102,7 +102,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Ticket.Properties.Resources.user_alt_solid1;
-            this.pictureBox1.Location = new System.Drawing.Point(60, 194);
+            this.pictureBox1.Location = new System.Drawing.Point(60, 149);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(30, 30);
             this.pictureBox1.TabIndex = 6;
@@ -111,7 +111,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(177)))), ((int)(((byte)(138)))));
-            this.panel2.Location = new System.Drawing.Point(60, 267);
+            this.panel2.Location = new System.Drawing.Point(60, 222);
             this.panel2.Margin = new System.Windows.Forms.Padding(0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(400, 4);
@@ -124,7 +124,7 @@
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(60, 300);
+            this.btnLogin.Location = new System.Drawing.Point(60, 275);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(400, 50);
             this.btnLogin.TabIndex = 8;

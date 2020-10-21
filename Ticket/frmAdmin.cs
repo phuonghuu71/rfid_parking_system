@@ -137,12 +137,12 @@ namespace Ticket
 
                 pbImage.Image = (Image)myImg;
 
+                textValue = "";
 
             }
 
             catch { }
 
-            textValue = "";
 
         }
 
@@ -335,6 +335,7 @@ namespace Ticket
             }
             else
             {
+
                 MessageBox.Show("Nhập thiếu thông tin", "Lỗi");
             }
         }
@@ -411,7 +412,7 @@ namespace Ticket
                 if(DateTime.Parse(getStatisList[i].TimeOut).ToString("yyyy-M-dd").Equals(DateTime.Now.ToString("yyyy-M-dd"))) {
                     count++;
                     GuestDAL.Instance.deleteCustomerByID(getStatisList[i].CardID);
-                //    GuestDAL.Instance.deleteStatisticalByID(getStatisList[i].CardID);
+                //  GuestDAL.Instance.deleteStatisticalByID(getStatisList[i].CardID);
                 }
             }
             if(count > 0)

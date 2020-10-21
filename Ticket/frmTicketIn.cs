@@ -99,21 +99,23 @@ namespace Ticket
 
         private void bwTicketIn_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-
-
-            textAccept = textValue;
-
-            Customer getCus = GuestDAL.Instance.getCustomerByID(textAccept);
-
-            real_time = DateTime.Now.ToString("yyyy-M-dd HH:mm:ss");
-
-
-
-            if (textAccept != null)
+            try
             {
 
+
+                textAccept = textValue;
+
+                Customer getCus = GuestDAL.Instance.getCustomerByID(textAccept);
+
+                real_time = DateTime.Now.ToString("yyyy-M-dd HH:mm:ss");
+
+
+
+                if (textAccept != null)
+                {
+
                     txtcardID.Text = textAccept;
-                
+
                     Bitmap myImg;
 
                     string directory = @"C:\Users\UwU\source\repos\Ticket\Ticket\images\";
@@ -127,73 +129,75 @@ namespace Ticket
                     pbImage.ClientSize = new Size(myImg.Width, myImg.Height);
 
                     pbImage.Image = (Image)myImg;
-                
 
-                if (getCus != null)
-                {
-                    txtType.Text = getCus.Type;
 
-                    if (getCus.Type.ToString().Equals("GUEST") == true)
+                    if (getCus != null)
                     {
+                        txtType.Text = getCus.Type;
+
+                        if (getCus.Type.ToString().Equals("GUEST") == true)
+                        {
 
 
-                        txtTimeIn.Text = DateTime.Parse(getCus.Time).ToString("yyyy-M-dd HH:mm:ss");
-                        txtStatus.Text = getCus.Status.ToString();
-                        txtStatusOut.Text = "OUT";
-                        txtTimeOut.Text = real_time;
-                        txtcardIDOut.Text = textAccept;
-                        pbImageOut.ClientSize = new Size(myImg.Width, myImg.Height);
-                        pbImageOut.Image = (Image)myImg;
+                            txtTimeIn.Text = DateTime.Parse(getCus.Time).ToString("yyyy-M-dd HH:mm:ss");
+                            txtStatus.Text = getCus.Status.ToString();
+                            txtStatusOut.Text = "OUT";
+                            txtTimeOut.Text = real_time;
+                            txtcardIDOut.Text = textAccept;
+                            pbImageOut.ClientSize = new Size(myImg.Width, myImg.Height);
+                            pbImageOut.Image = (Image)myImg;
+                        }
+
+                        else
+
+                        if (getCus.Type.ToString().Equals("USER") == true && getCus.Status.ToString().Equals("IN") == true)
+                        {
+                            txtcardID.Text = getCus.CardID;
+                            txtStatus.Text = getCus.Status;
+                            txtTimeIn.Text = DateTime.Parse(getCus.Time).ToString("yyyy-M-dd HH:mm:ss");
+
+                            txtcardIDOut.Text = getCus.CardID;
+                            txtTimeOut.Text = real_time;
+                            txtStatusOut.Text = "OUT";
+                            pbImageOut.ClientSize = new Size(myImg.Width, myImg.Height);
+                            pbImageOut.Image = (Image)myImg;
+
+                        }
+
+                        else
+
+                        if (getCus.Type.ToString().Equals("USER") == true && getCus.Status.ToString().Equals("OUT") == true)
+                        {
+                            txtcardIDOut.Text = getCus.CardID;
+                            txtTimeOut.Text = DateTime.Parse(getCus.Time).ToString("yyyy-M-dd HH:mm:ss");
+                            txtStatusOut.Text = getCus.Status;
+                            pbImageOut.ClientSize = new Size(myImg.Width, myImg.Height);
+                            pbImageOut.Image = (Image)myImg;
+
+                            txtcardID.Text = getCus.CardID;
+                            txtTimeIn.Text = real_time;
+                            txtStatus.Text = "IN";
+
+                        }
+
                     }
-
                     else
-
-                    if(getCus.Type.ToString().Equals("USER") == true && getCus.Status.ToString().Equals("IN") == true)
                     {
-                        txtcardID.Text = getCus.CardID;
-                        txtStatus.Text = getCus.Status;
-                        txtTimeIn.Text = DateTime.Parse(getCus.Time).ToString("yyyy-M-dd HH:mm:ss");
-
-                        txtcardIDOut.Text = getCus.CardID;
-                        txtTimeOut.Text = real_time;
-                        txtStatusOut.Text = "OUT";
-                        pbImageOut.ClientSize = new Size(myImg.Width, myImg.Height);
-                        pbImageOut.Image = (Image)myImg;
-
-                    }
-
-                    else
-
-                    if (getCus.Type.ToString().Equals("USER") == true && getCus.Status.ToString().Equals("OUT") == true)
-                    {
-                        txtcardIDOut.Text = getCus.CardID;
-                        txtTimeOut.Text = DateTime.Parse(getCus.Time).ToString("yyyy-M-dd HH:mm:ss");
-                        txtStatusOut.Text = getCus.Status;
-                        pbImageOut.ClientSize = new Size(myImg.Width, myImg.Height);
-                        pbImageOut.Image = (Image)myImg;
-
-                        txtcardID.Text = getCus.CardID;
+                        txtType.Text = "GUEST";
                         txtTimeIn.Text = real_time;
                         txtStatus.Text = "IN";
-                        
                     }
 
                 }
+
                 else
                 {
-                    txtType.Text = "GUEST";
-                    txtTimeIn.Text = real_time;
-                    txtStatus.Text = "IN";
+                    MessageBox.Show("Không quét được thẻ", "Lỗi");
                 }
 
+                textValue = "";
             }
-
-            else
-            {
-                MessageBox.Show("Không quét được thẻ", "Lỗi");
-            }
-
-            textValue = "";
+            catch { }
 
         }
         #endregion

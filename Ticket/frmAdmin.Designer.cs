@@ -560,6 +560,7 @@
             // 
             // cbType
             // 
+            this.cbType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbType.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbType.FormattingEnabled = true;
             this.cbType.Location = new System.Drawing.Point(221, 140);
