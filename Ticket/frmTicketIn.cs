@@ -32,6 +32,10 @@ namespace Ticket
         {
             InitializeComponent();
             this.getStaffInfo = info;
+            if(GetStaffInfo.Type.Equals("staff") == true)
+            {
+                btnAdmin.Visible = false;
+            }
         }
 
         private void frmTicketIn_Load(object sender, EventArgs e)
@@ -41,6 +45,7 @@ namespace Ticket
             bwTicketIn.WorkerSupportsCancellation = true;
 //            bwTicketIn.DoWork += new DoWorkEventHandler(bwTicketIn_DoWork);
 //            bwTicketIn.RunWorkerCompleted += new RunWorkerCompletedEventHandler(bwTicketIn_RunWorkerCompleted);
+
 
             if (bwTicketIn.IsBusy != true)
             {
@@ -207,96 +212,95 @@ namespace Ticket
         private void btnAccept_Click(object sender, EventArgs e)
         {
 
-                String status = "IN";
-                String type = "GUEST";
-                double money = 0;
+            String status = "IN";
+            String type = "GUEST";
+            double money = 0;
 
-                if(textAccept != "")
+            if(textAccept != "")
+            {
+
+                int id = Int32.Parse(textAccept[textAccept.Length - 1].ToString()) + Int32.Parse(textAccept[textAccept.Length - 2].ToString());
+
+                Customer getCus = GuestDAL.Instance.getCustomerByID(textAccept);
+
+                Customer myCustomer = new Customer(txtcardID.Text, real_time, id.ToString(), status, type);
+
+
+                if (getCus == null)
                 {
+                    MessageBox.Show("Thêm vé thành công", "Thành Công");
 
-                    int id = Int32.Parse(textAccept[textAccept.Length - 1].ToString()) + Int32.Parse(textAccept[textAccept.Length - 2].ToString());
-
-                    Customer getCus = GuestDAL.Instance.getCustomerByID(textAccept);
-
-                    Customer myCustomer = new Customer(txtcardID.Text, real_time, id.ToString(), status, type);
-
-
-                    if (getCus == null)
-                    {
-                        MessageBox.Show("Thêm vé thành công", "Thành Công");
-
-                        GuestDAL.Instance.addtoDB(myCustomer);
-
-                    }
-
-                    else
-
-                    if (getCus.Type.ToString().Equals("USER") == true && getCus.Status.ToString().Equals("OUT") == true)
-                    {
-                        status = "IN";
-                        type = "USER";
-                        Customer myUser = new Customer(textAccept, DateTime.Now.ToString("yyyy-M-dd HH:mm:ss"), id.ToString(), status, type);
-                        GuestDAL.Instance.updateCustomerByID(myUser);
-                        MessageBox.Show(string.Format("Quét thẻ user thành công (vào) \nThời gian vào lúc {0}",real_time), "Thành công");
-                    }
-                    else
-
-                    if(getCus.Type.ToString().Equals("USER") == true && getCus.Status.ToString().Equals("IN") == true)
-                    {
-
-                        status = "OUT";
-                        type = "USER";
-                        Customer myUser = new Customer(textAccept, DateTime.Now.ToString("yyyy-M-dd HH:mm:ss"), id.ToString(), status, type);
-                        GuestDAL.Instance.updateCustomerByID(myUser);
-
-                        MessageBox.Show(string.Format("Quét thẻ user thành công (ra) \nThời gian ra lúc {0}", real_time), "Thành công");
-                    }
-
-                    else
-
-                    if(getCus.Type.ToString().Equals("GUEST") == true)
-                    {
-                        if (getCus.Status.ToString().Equals("IN") == true)
-                        {
-                            TimeSpan diff = (DateTime.Parse(DateTime.Parse(real_time).ToString("yyyy-M-dd HH:mm:ss"))).Subtract(DateTime.Parse(DateTime.Parse(getCus.Time).ToString("yyyy-M-dd HH:mm:ss")));
-                            money = diff.TotalSeconds * 0.3;
-                            DialogResult dr = MessageBox.Show(string.Format("Số tiền cần phải trả là {0} đồng \nThời gian xe vào {1}", money, getCus.Time.ToString()), "Trả tiền", MessageBoxButtons.YesNo);
-                            switch (dr)
-                            {
-                                case DialogResult.Yes:
-                                    Statistical statis = new Statistical(getCus.CardID, DateTime.Parse(getCus.Time).ToString("yyyy-M-dd HH:mm:ss"), real_time, getCus.Type, (int)money);
-                                    GuestDAL.Instance.addtoStatisticalDB(statis);
-                                    GuestDAL.Instance.deleteCustomerByID(getCus.CardID);
-                                    MessageBox.Show("Tính tiền thành công", " Thành công");
-                                    break;
-                                case DialogResult.No:
-                                    MessageBox.Show("Tính tiền thất bại", " Thất bại");
-                                    break;
-                            }
-                        }
-                    }
-
-                    else
-
-                    {
-                        MessageBox.Show("Mã thẻ đã tồn tại", "Lỗi");
-                    }
-
+                    GuestDAL.Instance.addtoDB(myCustomer);
 
                 }
 
                 else
+
+                if (getCus.Type.ToString().Equals("USER") == true && getCus.Status.ToString().Equals("OUT") == true)
                 {
-                    MessageBox.Show("Không quét được thẻ", "Lỗi");
+                    status = "IN";
+                    type = "USER";
+                    Customer myUser = new Customer(textAccept, DateTime.Now.ToString("yyyy-M-dd HH:mm:ss"), id.ToString(), status, type);
+                    GuestDAL.Instance.updateCustomerByID(myUser);
+                    MessageBox.Show(string.Format("Quét thẻ user thành công (vào) \nThời gian vào lúc {0}",real_time), "Thành công");
+                }
+                else
+
+                if(getCus.Type.ToString().Equals("USER") == true && getCus.Status.ToString().Equals("IN") == true)
+                {
+
+                    status = "OUT";
+                    type = "USER";
+                    Customer myUser = new Customer(textAccept, DateTime.Now.ToString("yyyy-M-dd HH:mm:ss"), id.ToString(), status, type);
+                    GuestDAL.Instance.updateCustomerByID(myUser);
+
+                    MessageBox.Show(string.Format("Quét thẻ user thành công (ra) \nThời gian ra lúc {0}", real_time), "Thành công");
+                }
+
+                else
+
+                if(getCus.Type.ToString().Equals("GUEST") == true)
+                {
+                    if (getCus.Status.ToString().Equals("IN") == true)
+                    {
+                        TimeSpan diff = (DateTime.Parse(DateTime.Parse(real_time).ToString("yyyy-M-dd HH:mm:ss"))).Subtract(DateTime.Parse(DateTime.Parse(getCus.Time).ToString("yyyy-M-dd HH:mm:ss")));
+                        money = diff.TotalSeconds * 0.3 + 3000;
+                        DialogResult dr = MessageBox.Show(string.Format("Số tiền cần phải trả là {0} đồng \nThời gian xe vào {1}", money, getCus.Time.ToString()), "Trả tiền", MessageBoxButtons.YesNo);
+                        switch (dr)
+                        {
+                            case DialogResult.Yes:
+                                Statistical statis = new Statistical(getCus.CardID, DateTime.Parse(getCus.Time).ToString("yyyy-M-dd HH:mm:ss"), real_time, getCus.Type, (int)money);
+                                GuestDAL.Instance.addtoStatisticalDB(statis);
+                                GuestDAL.Instance.deleteCustomerByID(getCus.CardID);
+                                MessageBox.Show("Tính tiền thành công", " Thành công");
+                                break;
+                            case DialogResult.No:
+                                MessageBox.Show("Tính tiền thất bại", " Thất bại");
+                                break;
+                        }
+                    }
+                }
+
+                else
+
+                {
+                    MessageBox.Show("Mã thẻ đã tồn tại", "Lỗi");
                 }
 
 
-            btnCancel.PerformClick();
+            }
+
+            else
+            {
+                MessageBox.Show("Không quét được thẻ", "Lỗi");
+            }
+
+            cancel();
 
         }
 
 
-        private void btnCancel_Click(object sender, EventArgs e)
+        void cancel()
         {
             txtcardID.Text = "";
             txtTimeIn.Text = "";
@@ -316,6 +320,11 @@ namespace Ticket
             {
                 bwTicketIn.RunWorkerAsync();
             }
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            cancel();
         }
 
 

@@ -53,6 +53,48 @@ namespace Ticket.DAL
 
         }
 
+        public List<Statistical> getStatisticalDBByDay(string day, string month, string year)
+        {
+            List<Statistical> statisList = new List<Statistical>();
+            string query = string.Format("SELECT * FROM Statistical WHERE DAY(timeIn) = '{0}' AND MONTH(timeIn) = '{1}' AND YEAR(timeIn) = '{2}'", day, month, year);
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow item in data.Rows)
+            {
+                Statistical statis = new Statistical(item);
+                statisList.Add(statis);
+            }
+            return statisList;
+
+        }
+
+        public List<Statistical> getStatisticalDBByMonth(string month, string year)
+        {
+            List<Statistical> statisList = new List<Statistical>();
+            string query = string.Format("SELECT * FROM Statistical WHERE MONTH(timeIn) = '{0}' AND YEAR(timeIn) = '{1}'", month, year);
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow item in data.Rows)
+            {
+                Statistical statis = new Statistical(item);
+                statisList.Add(statis);
+            }
+            return statisList;
+
+        }
+
+        public List<Statistical> getStatisticalDBByYear(string year)
+        {
+            List<Statistical> statisList = new List<Statistical>();
+            string query = string.Format("SELECT * FROM Statistical WHERE YEAR(timeIn) = '{0}'", year);
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow item in data.Rows)
+            {
+                Statistical statis = new Statistical(item);
+                statisList.Add(statis);
+            }
+            return statisList;
+
+        }
+
         public List<Statistical> getStatisticalDBByUser()
         {
             List<Statistical> statisList = new List<Statistical>();

@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -45,6 +47,7 @@ namespace Ticket
 
             Loaddtgv();
             AddDataBinding();
+
             bwInsertUser.WorkerReportsProgress = true;
             bwInsertUser.WorkerSupportsCancellation = true;
 
@@ -52,6 +55,7 @@ namespace Ticket
 
             cbType.Items.Add("admin");
             cbType.Items.Add("staff");
+
 
             if (bwInsertUser.IsBusy != true)
             {
@@ -168,8 +172,12 @@ namespace Ticket
         }
         void AddUserBinding()
         {
+
+
             txtcardID.DataBindings.Add(new Binding("Text", dtgvInsertUser.DataSource, "cardID", true, DataSourceUpdateMode.Never));
             txtTimeIn.DataBindings.Add(new Binding("Text", dtgvInsertUser.DataSource, "Time", true, DataSourceUpdateMode.Never));
+
+
         }
         void LoadListUser()
         {
@@ -187,25 +195,79 @@ namespace Ticket
         }
         void LoadListStaff()
         {
-            staffList.DataSource = StaffDAL.Instance.getStaffList();
 
+
+            staffList.DataSource = StaffDAL.Instance.getStaffList();
             this.dtgvStaff.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             this.dtgvStaff.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             this.dtgvStaff.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             this.dtgvStaff.Columns[0].HeaderText = "username";
             this.dtgvStaff.Columns[1].HeaderText = "password";
             this.dtgvStaff.Columns[2].HeaderText = "type";
+
+
         }
         void AddStaffBinding()
         {
+
+
             txtUsername.DataBindings.Add(new Binding("Text", dtgvStaff.DataSource, "username", true, DataSourceUpdateMode.Never));
-            txtPassword.DataBindings.Add(new Binding("Text", dtgvStaff.DataSource, "password", true, DataSourceUpdateMode.Never));
+            txtPassword.DataBindings.Add(new Binding(("Text"), dtgvStaff.DataSource, "password", true, DataSourceUpdateMode.Never));
             cbType.DataBindings.Add(new Binding("Text", dtgvStaff.DataSource, "type", true, DataSourceUpdateMode.Never));
+
+
         }
         void LoadListStatis()
         {
 
+
+            dtpkSortByDay.Format = DateTimePickerFormat.Custom;
+            dtpkSortByDay.CustomFormat = "dd";
+            dtpkSortByDay.ShowUpDown = true;
+
+            dtpkSortByMonth.Format = DateTimePickerFormat.Custom;
+            dtpkSortByMonth.CustomFormat = "M";
+            dtpkSortByMonth.ShowUpDown = true;
+
+            dtpkSortByYear.Format = DateTimePickerFormat.Custom;
+            dtpkSortByYear.CustomFormat = "yyyy";
+            dtpkSortByYear.ShowUpDown = true;
+
             statisList.DataSource = GuestDAL.Instance.getStatisticalDBByDate(dtpFrom.Value.ToString("yyyy-M-dd"), dtpTo.Value.ToString("yyyy-M-dd"));
+
+        //statisList.DataSource = GuestDAL.Instance.getStatisticalDBByDate(dtpkSortByDay.Value.ToString("yyyy-M-dd"), dtpkSortByDay.Value.ToString("yyyy-M-dd"));
+
+            customStatisgv();
+
+
+        }
+        void LoadListStatisByDay()
+        {
+
+
+            statisList.DataSource = GuestDAL.Instance.getStatisticalDBByDay(dtpkSortByDay.Value.Day.ToString(), dtpkSortByMonth.Value.Month.ToString(), dtpkSortByYear.Value.Year.ToString());
+
+
+        }
+        void LoadListStatisByMonth()
+        {
+
+
+            statisList.DataSource = GuestDAL.Instance.getStatisticalDBByMonth(dtpkSortByMonth.Value.Month.ToString(), dtpkSortByYear.Value.Year.ToString());
+
+
+        }
+        void LoadListStatisByYear()
+        {
+
+
+            statisList.DataSource = GuestDAL.Instance.getStatisticalDBByYear(dtpkSortByYear.Value.Year.ToString());
+
+
+        }
+        void customStatisgv()
+        {
+
 
             this.dtgvStatistical.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             this.dtgvStatistical.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
@@ -218,12 +280,13 @@ namespace Ticket
             this.dtgvStatistical.Columns[3].HeaderText = "type";
             this.dtgvStatistical.Columns[4].HeaderText = "money";
 
+
         }
         #endregion
 
-
-
         #region button
+        
+        //insert user to database
         private void btnAdd_Click(object sender, EventArgs e)
         {
 
@@ -262,11 +325,12 @@ namespace Ticket
             {
                 MessageBox.Show("Không quét được thẻ", "Lỗi");
             }
-
-            btnCancel.PerformClick();
+            cancel();
             //    MessageBox.Show("Không nhận được thẻ", "Lỗi");
         }
-        private void btnCancel_Click(object sender, EventArgs e)
+        
+        //cancel the present process
+        void cancel()
         {
             txtcardID.Text = "";
             txtTimeIn.Text = "";
@@ -280,26 +344,15 @@ namespace Ticket
             }
         }
 
-        private void btnSwitch_Click(object sender, EventArgs e)
+        private void btnCancel_Click(object sender, EventArgs e)
         {
-            if(bwInsertUser.IsBusy == true) {
-                bwInsertUser.CancelAsync();
-            }
-            frmTicketIn df = new frmTicketIn(GetStaffInfo);
-            this.Hide();
-            df.ShowDialog();
-            this.Close();
-        }
-        private void btnRefresh_Click(object sender, EventArgs e)
-        {
-            LoadListStatis();
-            Loaddtgv();
-            loadCrystalReport();
+            cancel();
         }
 
+        //delete user
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if(txtcardID.Text != "")
+            if (txtcardID.Text != "")
             {
                 GuestDAL.Instance.deleteCustomerByID(txtcardID.Text);
                 //    GuestDAL.Instance.deleteStatisticalByID(txtcardID.Text);
@@ -315,7 +368,46 @@ namespace Ticket
                 MessageBox.Show("Không xóa được tài khoản", "Lỗi");
             }
         }
-
+        //switch to main interface
+        private void btnSwitch_Click(object sender, EventArgs e)
+        {
+            if(bwInsertUser.IsBusy == true) {
+                bwInsertUser.CancelAsync();
+            }
+            frmTicketIn df = new frmTicketIn(GetStaffInfo);
+            this.Hide();
+            df.ShowDialog();
+            this.Close();
+        }
+        //refresh the current data
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            LoadListStatis();
+            Loaddtgv();
+            loadCrystalReport();
+        }
+        //sort by day, month, year
+        private void btnDay_Click(object sender, EventArgs e)
+        {
+            dtgvStatistical.DataSource = statisList;
+            LoadListStatisByDay();
+            loadCrystalReport();
+        }
+        //sort by month, year
+        private void btnMonth_Click(object sender, EventArgs e)
+        {
+            dtgvStatistical.DataSource = statisList;
+            LoadListStatisByMonth();
+            loadCrystalReport();
+        }
+        //sort by year
+        private void btnYear_Click(object sender, EventArgs e)
+        {
+            dtgvStatistical.DataSource = statisList;
+            LoadListStatisByYear();
+            loadCrystalReport();
+        }
+        //insert staff
         private void btnAddUser_Click(object sender, EventArgs e)
         {
             string username = txtUsername.Text;
@@ -328,7 +420,7 @@ namespace Ticket
             else
             if (pwd != "" && type != "")
             {
-                Staff staff = new Staff(username, pwd, type);
+                Staff staff = new Staff(username, (pwd), type);
                 StaffDAL.Instance.addtoStaffDB(staff);
                 MessageBox.Show("Thêm tài khoản thành công", "Thành công");
                 LoadListStaff();
@@ -339,6 +431,7 @@ namespace Ticket
                 MessageBox.Show("Nhập thiếu thông tin", "Lỗi");
             }
         }
+        //count admin type account
         private int adminCount()
         {
             int count = 0;
@@ -352,7 +445,7 @@ namespace Ticket
             }
             return count;
         }
-
+        //delete staff
         private void btnDeleteUser_Click(object sender, EventArgs e)
         {
             string username = txtUsername.Text;
@@ -375,7 +468,7 @@ namespace Ticket
             }
 
         }
-
+        //edit staff
         private void btnEditUser_Click(object sender, EventArgs e)
         {
             string username = txtUsername.Text;
@@ -388,7 +481,7 @@ namespace Ticket
             else
             if (pwd != "" && type != "")
             {
-                Staff staff = new Staff(username, pwd, type);
+                Staff staff = new Staff(username, (pwd), type);
                 StaffDAL.Instance.updateStaffByID(staff);
                 MessageBox.Show("Sửa tài khoản thành công", "Thành công");
                 LoadListStaff();
@@ -400,8 +493,10 @@ namespace Ticket
 
         }
 
+
         #endregion
 
+        #region delete expired user
         private void autoDeleteExpired()
         {
            
@@ -421,6 +516,7 @@ namespace Ticket
                 MessageBox.Show(string.Format("Đã xóa {0} tài khoản hết hạn", count), "Thông báo");
             }
         }
+        #endregion
 
         private void loadCrystalReport()
         {
