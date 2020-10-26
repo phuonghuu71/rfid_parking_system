@@ -1,5 +1,7 @@
 C:\Users\UwU\source\repos\Ticket\Ticket\obj\Debug\Ticket.frmAdmin.resources
 C:\Users\UwU\source\repos\Ticket\Ticket\obj\Debug\Ticket.frmLogin.resources
+C:\Users\UwU\source\repos\Ticket\Ticket\obj\Debug\Ticket.frmRegister_1.resources
+C:\Users\UwU\source\repos\Ticket\Ticket\obj\Debug\Ticket.frmRegister_2.resources
 C:\Users\UwU\source\repos\Ticket\Ticket\obj\Debug\Ticket.frmTicketIn.resources
 C:\Users\UwU\source\repos\Ticket\Ticket\obj\Debug\Ticket.Properties.Resources.resources
 C:\Users\UwU\source\repos\Ticket\Ticket\obj\Debug\Ticket.csproj.GenerateResource.cache
@@ -13,6 +15,7 @@ C:\Users\UwU\source\repos\Ticket\Ticket\bin\Debug\CrystalDecisions.CrystalReport
 C:\Users\UwU\source\repos\Ticket\Ticket\bin\Debug\CrystalDecisions.ReportSource.dll
 C:\Users\UwU\source\repos\Ticket\Ticket\bin\Debug\CrystalDecisions.Shared.dll
 C:\Users\UwU\source\repos\Ticket\Ticket\bin\Debug\CrystalDecisions.Windows.Forms.dll
+C:\Users\UwU\source\repos\Ticket\Ticket\bin\Debug\MaterialSkin.dll
 C:\Users\UwU\source\repos\Ticket\Ticket\bin\Debug\ShockwaveFlashObjects.dll
 C:\Users\UwU\source\repos\Ticket\Ticket\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
 C:\Users\UwU\source\repos\Ticket\Ticket\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
@@ -30,7 +33,4 @@ C:\Users\UwU\source\repos\Ticket\Ticket\bin\Debug\CrystalDecisions.ReportAppServ
 C:\Users\UwU\source\repos\Ticket\Ticket\obj\Debug\Ticket.csproj.CopyComplete
 C:\Users\UwU\source\repos\Ticket\Ticket\obj\Debug\Ticket.exe
 C:\Users\UwU\source\repos\Ticket\Ticket\obj\Debug\Ticket.pdb
-C:\Users\UwU\source\repos\Ticket\Ticket\bin\Debug\MaterialSkin.dll
 C:\Users\UwU\source\repos\Ticket\Ticket\obj\Debug\Ticket.csprojAssemblyReference.cache
-C:\Users\UwU\source\repos\Ticket\Ticket\obj\Debug\Ticket.frmRegister_1.resources
-C:\Users\UwU\source\repos\Ticket\Ticket\obj\Debug\Ticket.frmRegister_2.resources

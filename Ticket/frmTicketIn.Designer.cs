@@ -33,13 +33,11 @@
             this.bwTicketIn = new System.ComponentModel.BackgroundWorker();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel5 = new System.Windows.Forms.Panel();
+            this.lbFullname = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnExit = new System.Windows.Forms.Button();
-            this.btnAdmin = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnCancel = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.btnAccept = new Bunifu.Framework.UI.BunifuThinButton2();
             this.panel = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
@@ -49,7 +47,6 @@
             this.txtTimeIn = new System.Windows.Forms.TextBox();
             this.lbTime = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.pbImage = new System.Windows.Forms.PictureBox();
             this.txtcardID = new System.Windows.Forms.TextBox();
             this.txtStatus = new System.Windows.Forms.TextBox();
             this.lbStatus = new System.Windows.Forms.Label();
@@ -59,20 +56,30 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtcardIDOut = new System.Windows.Forms.TextBox();
-            this.pbImageOut = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtStatusOut = new System.Windows.Forms.TextBox();
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.label10 = new System.Windows.Forms.Label();
+            this.pbImage = new System.Windows.Forms.PictureBox();
+            this.pbImageOut = new System.Windows.Forms.PictureBox();
+            this.btnCancel = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btnAccept = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.btnAdmin = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbProfile = new Ticket.roundPicturebox();
             this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbImage)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbImageOut)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbProfile)).BeginInit();
             this.SuspendLayout();
             // 
             // bwTicketIn
@@ -88,12 +95,40 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(77)))), ((int)(((byte)(107)))));
-            this.panel5.Controls.Add(this.label4);
+            this.panel5.Controls.Add(this.pictureBox1);
+            this.panel5.Controls.Add(this.lbFullname);
+            this.panel5.Controls.Add(this.label9);
+            this.panel5.Controls.Add(this.pbProfile);
+            this.panel5.Controls.Add(this.label10);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1600, 100);
             this.panel5.TabIndex = 26;
+            // 
+            // lbFullname
+            // 
+            this.lbFullname.AutoSize = true;
+            this.lbFullname.BackColor = System.Drawing.Color.Transparent;
+            this.lbFullname.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbFullname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(177)))), ((int)(((byte)(138)))));
+            this.lbFullname.Location = new System.Drawing.Point(1169, 39);
+            this.lbFullname.Name = "lbFullname";
+            this.lbFullname.Size = new System.Drawing.Size(86, 32);
+            this.lbFullname.TabIndex = 22;
+            this.lbFullname.Text = "name";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(1016, 39);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(147, 32);
+            this.label9.TabIndex = 21;
+            this.label9.Text = "Welcome: ";
             // 
             // label4
             // 
@@ -101,7 +136,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(20, 30);
+            this.label4.Location = new System.Drawing.Point(50, 50);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(430, 32);
             this.label4.TabIndex = 7;
@@ -119,40 +154,6 @@
             this.panel1.Size = new System.Drawing.Size(200, 800);
             this.panel1.TabIndex = 5;
             // 
-            // btnExit
-            // 
-            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(177)))), ((int)(((byte)(138)))));
-            this.btnExit.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnExit.FlatAppearance.BorderSize = 0;
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExit.Location = new System.Drawing.Point(0, 750);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(200, 50);
-            this.btnExit.TabIndex = 12;
-            this.btnExit.Text = "Thoát";
-            this.btnExit.UseVisualStyleBackColor = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // btnAdmin
-            // 
-            this.btnAdmin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(177)))), ((int)(((byte)(138)))));
-            this.btnAdmin.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAdmin.FlatAppearance.BorderSize = 0;
-            this.btnAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdmin.ForeColor = System.Drawing.Color.White;
-            this.btnAdmin.Image = ((System.Drawing.Image)(resources.GetObject("btnAdmin.Image")));
-            this.btnAdmin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdmin.Location = new System.Drawing.Point(0, 0);
-            this.btnAdmin.Name = "btnAdmin";
-            this.btnAdmin.Size = new System.Drawing.Size(200, 50);
-            this.btnAdmin.TabIndex = 4;
-            this.btnAdmin.Text = "Admin";
-            this.btnAdmin.UseVisualStyleBackColor = false;
-            this.btnAdmin.Click += new System.EventHandler(this.btnAdmin_Click);
-            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -168,58 +169,6 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(380, 70);
             this.tableLayoutPanel1.TabIndex = 22;
             // 
-            // btnCancel
-            // 
-            this.btnCancel.ActiveBorderThickness = 1;
-            this.btnCancel.ActiveCornerRadius = 5;
-            this.btnCancel.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(177)))), ((int)(((byte)(160)))));
-            this.btnCancel.ActiveForecolor = System.Drawing.Color.White;
-            this.btnCancel.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(177)))), ((int)(((byte)(160)))));
-            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(50)))), ((int)(((byte)(64)))));
-            this.btnCancel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCancel.BackgroundImage")));
-            this.btnCancel.ButtonText = "Cancel";
-            this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCancel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.IdleBorderThickness = 1;
-            this.btnCancel.IdleCornerRadius = 5;
-            this.btnCancel.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(177)))), ((int)(((byte)(138)))));
-            this.btnCancel.IdleForecolor = System.Drawing.Color.White;
-            this.btnCancel.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(177)))), ((int)(((byte)(138)))));
-            this.btnCancel.Location = new System.Drawing.Point(195, 5);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(5);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(180, 60);
-            this.btnCancel.TabIndex = 27;
-            this.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
-            // btnAccept
-            // 
-            this.btnAccept.ActiveBorderThickness = 1;
-            this.btnAccept.ActiveCornerRadius = 5;
-            this.btnAccept.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(177)))), ((int)(((byte)(160)))));
-            this.btnAccept.ActiveForecolor = System.Drawing.Color.White;
-            this.btnAccept.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(177)))), ((int)(((byte)(160)))));
-            this.btnAccept.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(50)))), ((int)(((byte)(64)))));
-            this.btnAccept.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAccept.BackgroundImage")));
-            this.btnAccept.ButtonText = "Accept";
-            this.btnAccept.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAccept.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAccept.ForeColor = System.Drawing.Color.White;
-            this.btnAccept.IdleBorderThickness = 1;
-            this.btnAccept.IdleCornerRadius = 5;
-            this.btnAccept.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(177)))), ((int)(((byte)(138)))));
-            this.btnAccept.IdleForecolor = System.Drawing.Color.White;
-            this.btnAccept.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(177)))), ((int)(((byte)(138)))));
-            this.btnAccept.Location = new System.Drawing.Point(5, 5);
-            this.btnAccept.Margin = new System.Windows.Forms.Padding(5);
-            this.btnAccept.Name = "btnAccept";
-            this.btnAccept.Size = new System.Drawing.Size(180, 60);
-            this.btnAccept.TabIndex = 26;
-            this.btnAccept.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnAccept.Click += new System.EventHandler(this.btnAccept_Click);
-            // 
             // panel
             // 
             this.panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(50)))), ((int)(((byte)(64)))));
@@ -227,6 +176,7 @@
             this.panel.Controls.Add(this.panel4);
             this.panel.Controls.Add(this.panel3);
             this.panel.Controls.Add(this.panel2);
+            this.panel.Controls.Add(this.label4);
             this.panel.Controls.Add(this.tableLayoutPanel1);
             this.panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -327,16 +277,6 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Hình Ảnh";
             // 
-            // pbImage
-            // 
-            this.pbImage.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.pbImage.Location = new System.Drawing.Point(175, 179);
-            this.pbImage.Name = "pbImage";
-            this.pbImage.Size = new System.Drawing.Size(200, 200);
-            this.pbImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbImage.TabIndex = 6;
-            this.pbImage.TabStop = false;
-            // 
             // txtcardID
             // 
             this.txtcardID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -434,16 +374,6 @@
             this.txtcardIDOut.Size = new System.Drawing.Size(390, 30);
             this.txtcardIDOut.TabIndex = 19;
             // 
-            // pbImageOut
-            // 
-            this.pbImageOut.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.pbImageOut.Location = new System.Drawing.Point(175, 176);
-            this.pbImageOut.Name = "pbImageOut";
-            this.pbImageOut.Size = new System.Drawing.Size(200, 200);
-            this.pbImageOut.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbImageOut.TabIndex = 16;
-            this.pbImageOut.TabStop = false;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -474,6 +404,143 @@
             this.bunifuElipse3.ElipseRadius = 15;
             this.bunifuElipse3.TargetControl = this.panel2;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 43.8F);
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(177)))), ((int)(((byte)(138)))));
+            this.label10.Location = new System.Drawing.Point(90, 10);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(419, 83);
+            this.label10.TabIndex = 24;
+            this.label10.Text = "BÃI GIỮ XE";
+            // 
+            // pbImage
+            // 
+            this.pbImage.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.pbImage.Location = new System.Drawing.Point(175, 179);
+            this.pbImage.Name = "pbImage";
+            this.pbImage.Size = new System.Drawing.Size(200, 200);
+            this.pbImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbImage.TabIndex = 6;
+            this.pbImage.TabStop = false;
+            // 
+            // pbImageOut
+            // 
+            this.pbImageOut.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.pbImageOut.Location = new System.Drawing.Point(175, 176);
+            this.pbImageOut.Name = "pbImageOut";
+            this.pbImageOut.Size = new System.Drawing.Size(200, 200);
+            this.pbImageOut.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbImageOut.TabIndex = 16;
+            this.pbImageOut.TabStop = false;
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.ActiveBorderThickness = 1;
+            this.btnCancel.ActiveCornerRadius = 5;
+            this.btnCancel.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(177)))), ((int)(((byte)(160)))));
+            this.btnCancel.ActiveForecolor = System.Drawing.Color.White;
+            this.btnCancel.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(177)))), ((int)(((byte)(160)))));
+            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(50)))), ((int)(((byte)(64)))));
+            this.btnCancel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCancel.BackgroundImage")));
+            this.btnCancel.ButtonText = "Hủy";
+            this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnCancel.ForeColor = System.Drawing.Color.White;
+            this.btnCancel.IdleBorderThickness = 1;
+            this.btnCancel.IdleCornerRadius = 5;
+            this.btnCancel.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(177)))), ((int)(((byte)(138)))));
+            this.btnCancel.IdleForecolor = System.Drawing.Color.White;
+            this.btnCancel.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(177)))), ((int)(((byte)(138)))));
+            this.btnCancel.Location = new System.Drawing.Point(195, 5);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(5);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(180, 60);
+            this.btnCancel.TabIndex = 27;
+            this.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnAccept
+            // 
+            this.btnAccept.ActiveBorderThickness = 1;
+            this.btnAccept.ActiveCornerRadius = 5;
+            this.btnAccept.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(177)))), ((int)(((byte)(160)))));
+            this.btnAccept.ActiveForecolor = System.Drawing.Color.White;
+            this.btnAccept.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(177)))), ((int)(((byte)(160)))));
+            this.btnAccept.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(50)))), ((int)(((byte)(64)))));
+            this.btnAccept.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAccept.BackgroundImage")));
+            this.btnAccept.ButtonText = "Chấp nhận";
+            this.btnAccept.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAccept.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnAccept.ForeColor = System.Drawing.Color.White;
+            this.btnAccept.IdleBorderThickness = 1;
+            this.btnAccept.IdleCornerRadius = 5;
+            this.btnAccept.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(177)))), ((int)(((byte)(138)))));
+            this.btnAccept.IdleForecolor = System.Drawing.Color.White;
+            this.btnAccept.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(177)))), ((int)(((byte)(138)))));
+            this.btnAccept.Location = new System.Drawing.Point(5, 5);
+            this.btnAccept.Margin = new System.Windows.Forms.Padding(5);
+            this.btnAccept.Name = "btnAccept";
+            this.btnAccept.Size = new System.Drawing.Size(180, 60);
+            this.btnAccept.TabIndex = 26;
+            this.btnAccept.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnAccept.Click += new System.EventHandler(this.btnAccept_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(177)))), ((int)(((byte)(138)))));
+            this.btnExit.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.ForeColor = System.Drawing.Color.White;
+            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
+            this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExit.Location = new System.Drawing.Point(0, 750);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(200, 50);
+            this.btnExit.TabIndex = 12;
+            this.btnExit.Text = "Thoát";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // btnAdmin
+            // 
+            this.btnAdmin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(177)))), ((int)(((byte)(138)))));
+            this.btnAdmin.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAdmin.FlatAppearance.BorderSize = 0;
+            this.btnAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdmin.ForeColor = System.Drawing.Color.White;
+            this.btnAdmin.Image = ((System.Drawing.Image)(resources.GetObject("btnAdmin.Image")));
+            this.btnAdmin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdmin.Location = new System.Drawing.Point(0, 0);
+            this.btnAdmin.Name = "btnAdmin";
+            this.btnAdmin.Size = new System.Drawing.Size(200, 50);
+            this.btnAdmin.TabIndex = 4;
+            this.btnAdmin.Text = "Admin";
+            this.btnAdmin.UseVisualStyleBackColor = false;
+            this.btnAdmin.Click += new System.EventHandler(this.btnAdmin_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Ticket.Properties.Resources.pngegg1;
+            this.pictureBox1.Location = new System.Drawing.Point(15, 10);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(80, 80);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 23;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pbProfile
+            // 
+            this.pbProfile.Image = global::Ticket.Properties.Resources.user_alt_solid;
+            this.pbProfile.Location = new System.Drawing.Point(950, 21);
+            this.pbProfile.Name = "pbProfile";
+            this.pbProfile.Size = new System.Drawing.Size(60, 60);
+            this.pbProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbProfile.TabIndex = 8;
+            this.pbProfile.TabStop = false;
+            // 
             // frmTicketIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -493,14 +560,17 @@
             this.panel1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel.ResumeLayout(false);
+            this.panel.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbImage)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbImageOut)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbProfile)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -541,6 +611,11 @@
         private System.Windows.Forms.Panel panel5;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse3;
+        private roundPicturebox pbProfile;
+        private System.Windows.Forms.Label lbFullname;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label10;
     }
 }
 

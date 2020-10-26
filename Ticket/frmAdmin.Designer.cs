@@ -50,23 +50,23 @@
             this.dtgvInsertUser = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnDay = new System.Windows.Forms.Button();
-            this.btnMonth = new System.Windows.Forms.Button();
-            this.btnYear = new System.Windows.Forms.Button();
             this.dtpkSortByYear = new System.Windows.Forms.DateTimePicker();
             this.dtpkSortByMonth = new System.Windows.Forms.DateTimePicker();
             this.dtpkSortByDay = new System.Windows.Forms.DateTimePicker();
             this.dtpTo = new System.Windows.Forms.DateTimePicker();
-            this.btnRefresh = new System.Windows.Forms.Button();
             this.dtpFrom = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.btnDay = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btnMonth = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btnYear = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btnRefresh = new Bunifu.Framework.UI.BunifuThinButton2();
             this.parkingReportViewer = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnEditUser = new System.Windows.Forms.Button();
-            this.btnDeleteUser = new System.Windows.Forms.Button();
+            this.btnDeleteUser = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btnEditUser = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btnAddUser = new Bunifu.Framework.UI.BunifuThinButton2();
             this.cbType = new System.Windows.Forms.ComboBox();
-            this.btnAddUser = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -81,14 +81,14 @@
             this.txtcardID = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.materialTabSelector1 = new MaterialSkin.Controls.MaterialTabSelector();
-            this.beUser = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.dtgvStatistical = new System.Windows.Forms.DataGridView();
-            this.beStatistical = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
+            this.materialTabSelector1 = new MaterialSkin.Controls.MaterialTabSelector();
+            this.beUser = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.beStatistical = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.beStaff = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel4.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -107,10 +107,10 @@
             this.tableLayoutPanel9.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            this.tabPage3.SuspendLayout();
-            this.tabPage4.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvStatistical)).BeginInit();
+            this.tabPage3.SuspendLayout();
+            this.tabPage4.SuspendLayout();
             this.tableLayoutPanel10.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -153,7 +153,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 22F));
             this.tableLayoutPanel2.Controls.Add(this.btnCancel, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnSwitch, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnDelete, 1, 0);
@@ -414,136 +414,77 @@
             // tableLayoutPanel7
             // 
             this.tableLayoutPanel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(50)))), ((int)(((byte)(64)))));
-            this.tableLayoutPanel7.ColumnCount = 4;
+            this.tableLayoutPanel7.ColumnCount = 6;
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel7.Controls.Add(this.btnDay, 1, 2);
-            this.tableLayoutPanel7.Controls.Add(this.btnMonth, 2, 2);
-            this.tableLayoutPanel7.Controls.Add(this.btnYear, 3, 2);
-            this.tableLayoutPanel7.Controls.Add(this.dtpkSortByYear, 3, 1);
-            this.tableLayoutPanel7.Controls.Add(this.dtpkSortByMonth, 2, 1);
-            this.tableLayoutPanel7.Controls.Add(this.dtpkSortByDay, 1, 1);
-            this.tableLayoutPanel7.Controls.Add(this.dtpTo, 3, 0);
-            this.tableLayoutPanel7.Controls.Add(this.btnRefresh, 2, 0);
-            this.tableLayoutPanel7.Controls.Add(this.dtpFrom, 1, 0);
-            this.tableLayoutPanel7.Controls.Add(this.label8, 0, 1);
-            this.tableLayoutPanel7.Controls.Add(this.label9, 0, 0);
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel7.Controls.Add(this.dtpkSortByYear, 4, 1);
+            this.tableLayoutPanel7.Controls.Add(this.dtpkSortByMonth, 3, 1);
+            this.tableLayoutPanel7.Controls.Add(this.dtpkSortByDay, 2, 1);
+            this.tableLayoutPanel7.Controls.Add(this.dtpTo, 4, 0);
+            this.tableLayoutPanel7.Controls.Add(this.dtpFrom, 2, 0);
+            this.tableLayoutPanel7.Controls.Add(this.label8, 1, 1);
+            this.tableLayoutPanel7.Controls.Add(this.label9, 1, 0);
+            this.tableLayoutPanel7.Controls.Add(this.btnDay, 2, 2);
+            this.tableLayoutPanel7.Controls.Add(this.btnMonth, 3, 2);
+            this.tableLayoutPanel7.Controls.Add(this.btnYear, 4, 2);
+            this.tableLayoutPanel7.Controls.Add(this.btnRefresh, 3, 0);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 3;
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 93F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(1586, 200);
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 90F));
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 90F));
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 90F));
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(1586, 260);
             this.tableLayoutPanel7.TabIndex = 4;
-            // 
-            // btnDay
-            // 
-            this.btnDay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(177)))), ((int)(((byte)(138)))));
-            this.btnDay.FlatAppearance.BorderSize = 0;
-            this.btnDay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDay.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDay.ForeColor = System.Drawing.Color.White;
-            this.btnDay.Location = new System.Drawing.Point(637, 133);
-            this.btnDay.Name = "btnDay";
-            this.btnDay.Size = new System.Drawing.Size(311, 40);
-            this.btnDay.TabIndex = 9;
-            this.btnDay.Text = "Thống kê theo ngày";
-            this.btnDay.UseVisualStyleBackColor = false;
-            // 
-            // btnMonth
-            // 
-            this.btnMonth.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMonth.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(177)))), ((int)(((byte)(138)))));
-            this.btnMonth.FlatAppearance.BorderSize = 0;
-            this.btnMonth.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMonth.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMonth.ForeColor = System.Drawing.Color.White;
-            this.btnMonth.Location = new System.Drawing.Point(954, 133);
-            this.btnMonth.Name = "btnMonth";
-            this.btnMonth.Size = new System.Drawing.Size(311, 40);
-            this.btnMonth.TabIndex = 8;
-            this.btnMonth.Text = "Thống kê theo tháng";
-            this.btnMonth.UseVisualStyleBackColor = false;
-            // 
-            // btnYear
-            // 
-            this.btnYear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnYear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(177)))), ((int)(((byte)(138)))));
-            this.btnYear.FlatAppearance.BorderSize = 0;
-            this.btnYear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnYear.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnYear.ForeColor = System.Drawing.Color.White;
-            this.btnYear.Location = new System.Drawing.Point(1271, 133);
-            this.btnYear.Name = "btnYear";
-            this.btnYear.Size = new System.Drawing.Size(312, 40);
-            this.btnYear.TabIndex = 10;
-            this.btnYear.Text = "Thống kê theo năm";
-            this.btnYear.UseVisualStyleBackColor = false;
             // 
             // dtpkSortByYear
             // 
             this.dtpkSortByYear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dtpkSortByYear.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpkSortByYear.Location = new System.Drawing.Point(1271, 63);
+            this.dtpkSortByYear.Location = new System.Drawing.Point(1259, 115);
             this.dtpkSortByYear.Name = "dtpkSortByYear";
-            this.dtpkSortByYear.Size = new System.Drawing.Size(312, 39);
+            this.dtpkSortByYear.Size = new System.Drawing.Size(303, 39);
             this.dtpkSortByYear.TabIndex = 6;
             // 
             // dtpkSortByMonth
             // 
             this.dtpkSortByMonth.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dtpkSortByMonth.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpkSortByMonth.Location = new System.Drawing.Point(954, 63);
+            this.dtpkSortByMonth.Location = new System.Drawing.Point(950, 115);
             this.dtpkSortByMonth.Name = "dtpkSortByMonth";
-            this.dtpkSortByMonth.Size = new System.Drawing.Size(311, 39);
+            this.dtpkSortByMonth.Size = new System.Drawing.Size(303, 39);
             this.dtpkSortByMonth.TabIndex = 4;
             // 
             // dtpkSortByDay
             // 
             this.dtpkSortByDay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dtpkSortByDay.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpkSortByDay.Location = new System.Drawing.Point(637, 63);
+            this.dtpkSortByDay.Location = new System.Drawing.Point(641, 115);
             this.dtpkSortByDay.Name = "dtpkSortByDay";
-            this.dtpkSortByDay.Size = new System.Drawing.Size(311, 39);
+            this.dtpkSortByDay.Size = new System.Drawing.Size(303, 39);
             this.dtpkSortByDay.TabIndex = 7;
             // 
             // dtpTo
             // 
             this.dtpTo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dtpTo.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpTo.Location = new System.Drawing.Point(1271, 9);
+            this.dtpTo.Location = new System.Drawing.Point(1259, 25);
             this.dtpTo.Name = "dtpTo";
-            this.dtpTo.Size = new System.Drawing.Size(312, 39);
+            this.dtpTo.Size = new System.Drawing.Size(303, 39);
             this.dtpTo.TabIndex = 12;
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRefresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(177)))), ((int)(((byte)(138)))));
-            this.btnRefresh.FlatAppearance.BorderSize = 0;
-            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRefresh.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefresh.ForeColor = System.Drawing.Color.White;
-            this.btnRefresh.Location = new System.Drawing.Point(954, 9);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(311, 40);
-            this.btnRefresh.TabIndex = 3;
-            this.btnRefresh.Text = "Thống kê";
-            this.btnRefresh.UseVisualStyleBackColor = false;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // dtpFrom
             // 
             this.dtpFrom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dtpFrom.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFrom.Location = new System.Drawing.Point(637, 9);
+            this.dtpFrom.Location = new System.Drawing.Point(641, 25);
             this.dtpFrom.Name = "dtpFrom";
-            this.dtpFrom.Size = new System.Drawing.Size(311, 39);
+            this.dtpFrom.Size = new System.Drawing.Size(303, 39);
             this.dtpFrom.TabIndex = 11;
             // 
             // label8
@@ -552,9 +493,9 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(3, 66);
+            this.label8.Location = new System.Drawing.Point(23, 119);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(628, 32);
+            this.label8.Size = new System.Drawing.Size(612, 32);
             this.label8.TabIndex = 5;
             this.label8.Text = "Thống kê theo ngày, tháng, năm";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -565,12 +506,123 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(3, 13);
+            this.label9.Location = new System.Drawing.Point(23, 29);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(628, 32);
+            this.label9.Size = new System.Drawing.Size(612, 32);
             this.label9.TabIndex = 13;
             this.label9.Text = "Thống kê theo ngày bắt đầu và ngày kết thúc";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnDay
+            // 
+            this.btnDay.ActiveBorderThickness = 1;
+            this.btnDay.ActiveCornerRadius = 5;
+            this.btnDay.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(177)))), ((int)(((byte)(160)))));
+            this.btnDay.ActiveForecolor = System.Drawing.Color.White;
+            this.btnDay.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(177)))), ((int)(((byte)(160)))));
+            this.btnDay.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(50)))), ((int)(((byte)(64)))));
+            this.btnDay.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDay.BackgroundImage")));
+            this.btnDay.ButtonText = "Thống kê theo ngày";
+            this.btnDay.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDay.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDay.ForeColor = System.Drawing.Color.White;
+            this.btnDay.IdleBorderThickness = 1;
+            this.btnDay.IdleCornerRadius = 5;
+            this.btnDay.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(177)))), ((int)(((byte)(138)))));
+            this.btnDay.IdleForecolor = System.Drawing.Color.White;
+            this.btnDay.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(177)))), ((int)(((byte)(138)))));
+            this.btnDay.Location = new System.Drawing.Point(643, 186);
+            this.btnDay.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.btnDay.Name = "btnDay";
+            this.btnDay.Size = new System.Drawing.Size(299, 60);
+            this.btnDay.TabIndex = 28;
+            this.btnDay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnDay.Click += new System.EventHandler(this.btnDay_Click);
+            // 
+            // btnMonth
+            // 
+            this.btnMonth.ActiveBorderThickness = 1;
+            this.btnMonth.ActiveCornerRadius = 5;
+            this.btnMonth.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(177)))), ((int)(((byte)(160)))));
+            this.btnMonth.ActiveForecolor = System.Drawing.Color.White;
+            this.btnMonth.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(177)))), ((int)(((byte)(160)))));
+            this.btnMonth.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMonth.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(50)))), ((int)(((byte)(64)))));
+            this.btnMonth.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMonth.BackgroundImage")));
+            this.btnMonth.ButtonText = "Thống kê theo tháng";
+            this.btnMonth.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMonth.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMonth.ForeColor = System.Drawing.Color.White;
+            this.btnMonth.IdleBorderThickness = 1;
+            this.btnMonth.IdleCornerRadius = 5;
+            this.btnMonth.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(177)))), ((int)(((byte)(138)))));
+            this.btnMonth.IdleForecolor = System.Drawing.Color.White;
+            this.btnMonth.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(177)))), ((int)(((byte)(138)))));
+            this.btnMonth.Location = new System.Drawing.Point(952, 186);
+            this.btnMonth.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.btnMonth.Name = "btnMonth";
+            this.btnMonth.Size = new System.Drawing.Size(299, 60);
+            this.btnMonth.TabIndex = 29;
+            this.btnMonth.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnMonth.Click += new System.EventHandler(this.btnMonth_Click);
+            // 
+            // btnYear
+            // 
+            this.btnYear.ActiveBorderThickness = 1;
+            this.btnYear.ActiveCornerRadius = 5;
+            this.btnYear.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(177)))), ((int)(((byte)(160)))));
+            this.btnYear.ActiveForecolor = System.Drawing.Color.White;
+            this.btnYear.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(177)))), ((int)(((byte)(160)))));
+            this.btnYear.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnYear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(50)))), ((int)(((byte)(64)))));
+            this.btnYear.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnYear.BackgroundImage")));
+            this.btnYear.ButtonText = "Thống kê theo năm";
+            this.btnYear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnYear.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnYear.ForeColor = System.Drawing.Color.White;
+            this.btnYear.IdleBorderThickness = 1;
+            this.btnYear.IdleCornerRadius = 5;
+            this.btnYear.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(177)))), ((int)(((byte)(138)))));
+            this.btnYear.IdleForecolor = System.Drawing.Color.White;
+            this.btnYear.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(177)))), ((int)(((byte)(138)))));
+            this.btnYear.Location = new System.Drawing.Point(1261, 186);
+            this.btnYear.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.btnYear.Name = "btnYear";
+            this.btnYear.Size = new System.Drawing.Size(299, 60);
+            this.btnYear.TabIndex = 30;
+            this.btnYear.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnYear.Click += new System.EventHandler(this.btnYear_Click);
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.ActiveBorderThickness = 1;
+            this.btnRefresh.ActiveCornerRadius = 5;
+            this.btnRefresh.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(177)))), ((int)(((byte)(160)))));
+            this.btnRefresh.ActiveForecolor = System.Drawing.Color.White;
+            this.btnRefresh.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(177)))), ((int)(((byte)(160)))));
+            this.btnRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRefresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(50)))), ((int)(((byte)(64)))));
+            this.btnRefresh.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRefresh.BackgroundImage")));
+            this.btnRefresh.ButtonText = "Thống kê";
+            this.btnRefresh.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRefresh.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefresh.ForeColor = System.Drawing.Color.White;
+            this.btnRefresh.IdleBorderThickness = 1;
+            this.btnRefresh.IdleCornerRadius = 5;
+            this.btnRefresh.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(177)))), ((int)(((byte)(138)))));
+            this.btnRefresh.IdleForecolor = System.Drawing.Color.White;
+            this.btnRefresh.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(177)))), ((int)(((byte)(138)))));
+            this.btnRefresh.Location = new System.Drawing.Point(952, 15);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(299, 60);
+            this.btnRefresh.TabIndex = 31;
+            this.btnRefresh.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // parkingReportViewer
             // 
@@ -586,10 +638,10 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.btnEditUser);
             this.panel1.Controls.Add(this.btnDeleteUser);
-            this.panel1.Controls.Add(this.cbType);
+            this.panel1.Controls.Add(this.btnEditUser);
             this.panel1.Controls.Add(this.btnAddUser);
+            this.panel1.Controls.Add(this.cbType);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label5);
@@ -598,34 +650,92 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(703, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(886, 275);
+            this.panel1.Size = new System.Drawing.Size(886, 300);
             this.panel1.TabIndex = 10;
-            // 
-            // btnEditUser
-            // 
-            this.btnEditUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(177)))), ((int)(((byte)(138)))));
-            this.btnEditUser.FlatAppearance.BorderSize = 0;
-            this.btnEditUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditUser.ForeColor = System.Drawing.Color.White;
-            this.btnEditUser.Location = new System.Drawing.Point(582, 231);
-            this.btnEditUser.Name = "btnEditUser";
-            this.btnEditUser.Size = new System.Drawing.Size(150, 50);
-            this.btnEditUser.TabIndex = 2;
-            this.btnEditUser.Text = "Sửa";
-            this.btnEditUser.UseVisualStyleBackColor = false;
             // 
             // btnDeleteUser
             // 
-            this.btnDeleteUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(177)))), ((int)(((byte)(138)))));
-            this.btnDeleteUser.FlatAppearance.BorderSize = 0;
-            this.btnDeleteUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeleteUser.ActiveBorderThickness = 1;
+            this.btnDeleteUser.ActiveCornerRadius = 5;
+            this.btnDeleteUser.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(177)))), ((int)(((byte)(160)))));
+            this.btnDeleteUser.ActiveForecolor = System.Drawing.Color.White;
+            this.btnDeleteUser.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(177)))), ((int)(((byte)(160)))));
+            this.btnDeleteUser.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDeleteUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(50)))), ((int)(((byte)(64)))));
+            this.btnDeleteUser.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDeleteUser.BackgroundImage")));
+            this.btnDeleteUser.ButtonText = "Xóa";
+            this.btnDeleteUser.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDeleteUser.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteUser.ForeColor = System.Drawing.Color.White;
-            this.btnDeleteUser.Location = new System.Drawing.Point(426, 231);
+            this.btnDeleteUser.IdleBorderThickness = 1;
+            this.btnDeleteUser.IdleCornerRadius = 5;
+            this.btnDeleteUser.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(177)))), ((int)(((byte)(138)))));
+            this.btnDeleteUser.IdleForecolor = System.Drawing.Color.White;
+            this.btnDeleteUser.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(177)))), ((int)(((byte)(138)))));
+            this.btnDeleteUser.Location = new System.Drawing.Point(465, 214);
+            this.btnDeleteUser.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btnDeleteUser.Name = "btnDeleteUser";
-            this.btnDeleteUser.Size = new System.Drawing.Size(150, 50);
-            this.btnDeleteUser.TabIndex = 1;
-            this.btnDeleteUser.Text = "Xóa";
-            this.btnDeleteUser.UseVisualStyleBackColor = false;
+            this.btnDeleteUser.Size = new System.Drawing.Size(159, 60);
+            this.btnDeleteUser.TabIndex = 31;
+            this.btnDeleteUser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnDeleteUser.Click += new System.EventHandler(this.btnDeleteUser_Click);
+            // 
+            // btnEditUser
+            // 
+            this.btnEditUser.ActiveBorderThickness = 1;
+            this.btnEditUser.ActiveCornerRadius = 5;
+            this.btnEditUser.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(177)))), ((int)(((byte)(160)))));
+            this.btnEditUser.ActiveForecolor = System.Drawing.Color.White;
+            this.btnEditUser.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(177)))), ((int)(((byte)(160)))));
+            this.btnEditUser.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEditUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(50)))), ((int)(((byte)(64)))));
+            this.btnEditUser.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEditUser.BackgroundImage")));
+            this.btnEditUser.ButtonText = "Đổi mật khẩu";
+            this.btnEditUser.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditUser.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditUser.ForeColor = System.Drawing.Color.White;
+            this.btnEditUser.IdleBorderThickness = 1;
+            this.btnEditUser.IdleCornerRadius = 5;
+            this.btnEditUser.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(177)))), ((int)(((byte)(138)))));
+            this.btnEditUser.IdleForecolor = System.Drawing.Color.White;
+            this.btnEditUser.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(177)))), ((int)(((byte)(138)))));
+            this.btnEditUser.Location = new System.Drawing.Point(660, 214);
+            this.btnEditUser.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.btnEditUser.Name = "btnEditUser";
+            this.btnEditUser.Size = new System.Drawing.Size(159, 60);
+            this.btnEditUser.TabIndex = 30;
+            this.btnEditUser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnEditUser.Click += new System.EventHandler(this.btnEditUser_Click);
+            // 
+            // btnAddUser
+            // 
+            this.btnAddUser.ActiveBorderThickness = 1;
+            this.btnAddUser.ActiveCornerRadius = 5;
+            this.btnAddUser.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(177)))), ((int)(((byte)(160)))));
+            this.btnAddUser.ActiveForecolor = System.Drawing.Color.White;
+            this.btnAddUser.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(177)))), ((int)(((byte)(160)))));
+            this.btnAddUser.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAddUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(50)))), ((int)(((byte)(64)))));
+            this.btnAddUser.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddUser.BackgroundImage")));
+            this.btnAddUser.ButtonText = "Thêm";
+            this.btnAddUser.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddUser.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddUser.ForeColor = System.Drawing.Color.White;
+            this.btnAddUser.IdleBorderThickness = 1;
+            this.btnAddUser.IdleCornerRadius = 5;
+            this.btnAddUser.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(177)))), ((int)(((byte)(138)))));
+            this.btnAddUser.IdleForecolor = System.Drawing.Color.White;
+            this.btnAddUser.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(177)))), ((int)(((byte)(138)))));
+            this.btnAddUser.Location = new System.Drawing.Point(270, 214);
+            this.btnAddUser.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.btnAddUser.Name = "btnAddUser";
+            this.btnAddUser.Size = new System.Drawing.Size(159, 60);
+            this.btnAddUser.TabIndex = 29;
+            this.btnAddUser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
             // 
             // cbType
             // 
@@ -634,21 +744,8 @@
             this.cbType.FormattingEnabled = true;
             this.cbType.Location = new System.Drawing.Point(270, 165);
             this.cbType.Name = "cbType";
-            this.cbType.Size = new System.Drawing.Size(462, 40);
+            this.cbType.Size = new System.Drawing.Size(550, 40);
             this.cbType.TabIndex = 10;
-            // 
-            // btnAddUser
-            // 
-            this.btnAddUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(177)))), ((int)(((byte)(138)))));
-            this.btnAddUser.FlatAppearance.BorderSize = 0;
-            this.btnAddUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddUser.ForeColor = System.Drawing.Color.White;
-            this.btnAddUser.Location = new System.Drawing.Point(270, 231);
-            this.btnAddUser.Name = "btnAddUser";
-            this.btnAddUser.Size = new System.Drawing.Size(150, 50);
-            this.btnAddUser.TabIndex = 0;
-            this.btnAddUser.Text = "Thêm";
-            this.btnAddUser.UseVisualStyleBackColor = false;
             // 
             // label6
             // 
@@ -688,7 +785,7 @@
             this.txtUsername.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.Location = new System.Drawing.Point(270, 35);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(462, 39);
+            this.txtUsername.Size = new System.Drawing.Size(550, 39);
             this.txtUsername.TabIndex = 1;
             // 
             // txtPassword
@@ -696,7 +793,7 @@
             this.txtPassword.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Location = new System.Drawing.Point(270, 100);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(462, 39);
+            this.txtPassword.Size = new System.Drawing.Size(550, 39);
             this.txtPassword.TabIndex = 2;
             // 
             // dtgvStaff
@@ -816,6 +913,32 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Thống kê doanh thu";
             // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.ColumnCount = 3;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel5.Controls.Add(this.dtgvStatistical, 1, 0);
+            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 263);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 1;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(1586, 405);
+            this.tableLayoutPanel5.TabIndex = 5;
+            // 
+            // dtgvStatistical
+            // 
+            this.dtgvStatistical.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvStatistical.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtgvStatistical.Location = new System.Drawing.Point(23, 3);
+            this.dtgvStatistical.Name = "dtgvStatistical";
+            this.dtgvStatistical.RowHeadersWidth = 51;
+            this.dtgvStatistical.RowTemplate.Height = 24;
+            this.dtgvStatistical.Size = new System.Drawing.Size(1540, 399);
+            this.dtgvStatistical.TabIndex = 1;
+            // 
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(50)))), ((int)(((byte)(64)))));
@@ -839,6 +962,22 @@
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Tài khoản nhân viên";
             // 
+            // tableLayoutPanel10
+            // 
+            this.tableLayoutPanel10.ColumnCount = 3;
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel10.Controls.Add(this.dtgvStaff, 1, 1);
+            this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Left;
+            this.tableLayoutPanel10.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel10.Name = "tableLayoutPanel10";
+            this.tableLayoutPanel10.RowCount = 2;
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(700, 665);
+            this.tableLayoutPanel10.TabIndex = 11;
+            // 
             // materialTabSelector1
             // 
             this.materialTabSelector1.BaseTabControl = this.materialTabControl1;
@@ -856,52 +995,10 @@
             this.beUser.ElipseRadius = 15;
             this.beUser.TargetControl = this.dtgvInsertUser;
             // 
-            // tableLayoutPanel5
-            // 
-            this.tableLayoutPanel5.ColumnCount = 3;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel5.Controls.Add(this.dtgvStatistical, 1, 0);
-            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 203);
-            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            this.tableLayoutPanel5.RowCount = 1;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(1586, 465);
-            this.tableLayoutPanel5.TabIndex = 5;
-            // 
-            // dtgvStatistical
-            // 
-            this.dtgvStatistical.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvStatistical.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dtgvStatistical.Location = new System.Drawing.Point(23, 3);
-            this.dtgvStatistical.Name = "dtgvStatistical";
-            this.dtgvStatistical.RowHeadersWidth = 51;
-            this.dtgvStatistical.RowTemplate.Height = 24;
-            this.dtgvStatistical.Size = new System.Drawing.Size(1540, 459);
-            this.dtgvStatistical.TabIndex = 1;
-            // 
             // beStatistical
             // 
             this.beStatistical.ElipseRadius = 15;
             this.beStatistical.TargetControl = this.dtgvStatistical;
-            // 
-            // tableLayoutPanel10
-            // 
-            this.tableLayoutPanel10.ColumnCount = 3;
-            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel10.Controls.Add(this.dtgvStaff, 1, 1);
-            this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Left;
-            this.tableLayoutPanel10.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel10.Name = "tableLayoutPanel10";
-            this.tableLayoutPanel10.RowCount = 2;
-            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel10.Size = new System.Drawing.Size(700, 665);
-            this.tableLayoutPanel10.TabIndex = 11;
             // 
             // beStaff
             // 
@@ -944,10 +1041,10 @@
             this.tableLayoutPanel6.ResumeLayout(false);
             this.tableLayoutPanel6.PerformLayout();
             this.tabPage2.ResumeLayout(false);
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage4.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvStatistical)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage4.ResumeLayout(false);
             this.tableLayoutPanel10.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -975,23 +1072,16 @@
         private System.Windows.Forms.DataGridView dtgvInsertUser;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
-        private System.Windows.Forms.Button btnDay;
-        private System.Windows.Forms.Button btnMonth;
-        private System.Windows.Forms.Button btnYear;
         private System.Windows.Forms.DateTimePicker dtpkSortByYear;
         private System.Windows.Forms.DateTimePicker dtpkSortByMonth;
         private System.Windows.Forms.DateTimePicker dtpkSortByDay;
         private System.Windows.Forms.DateTimePicker dtpTo;
-        private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.DateTimePicker dtpFrom;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private CrystalDecisions.Windows.Forms.CrystalReportViewer parkingReportViewer;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnEditUser;
-        private System.Windows.Forms.Button btnDeleteUser;
         private System.Windows.Forms.ComboBox cbType;
-        private System.Windows.Forms.Button btnAddUser;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
@@ -1014,5 +1104,12 @@
         private Bunifu.Framework.UI.BunifuElipse beStatistical;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;
         private Bunifu.Framework.UI.BunifuElipse beStaff;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnDay;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnMonth;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnYear;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnRefresh;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnDeleteUser;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnEditUser;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnAddUser;
     }
 }

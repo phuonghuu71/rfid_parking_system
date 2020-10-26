@@ -40,8 +40,8 @@
             this.btnContinue = new Bunifu.Framework.UI.BunifuThinButton2();
             this.label5 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.btnReturn = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.beReg1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -174,9 +174,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnContinue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(50)))), ((int)(((byte)(64)))));
             this.btnContinue.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnContinue.BackgroundImage")));
-            this.btnContinue.ButtonText = "Continue";
+            this.btnContinue.ButtonText = "Tiếp tục";
             this.btnContinue.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnContinue.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnContinue.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnContinue.ForeColor = System.Drawing.Color.White;
             this.btnContinue.IdleBorderThickness = 1;
             this.btnContinue.IdleCornerRadius = 5;
@@ -189,6 +189,7 @@
             this.btnContinue.Size = new System.Drawing.Size(390, 60);
             this.btnContinue.TabIndex = 13;
             this.btnContinue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnContinue.Click += new System.EventHandler(this.btnContinue_Click);
             // 
             // label5
             // 
@@ -238,11 +239,6 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(500, 666);
             this.tableLayoutPanel1.TabIndex = 15;
             // 
-            // bunifuElipse1
-            // 
-            this.bunifuElipse1.ElipseRadius = 15;
-            this.bunifuElipse1.TargetControl = this;
-            // 
             // btnReturn
             // 
             this.btnReturn.ActiveBorderThickness = 1;
@@ -254,9 +250,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnReturn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(50)))), ((int)(((byte)(64)))));
             this.btnReturn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnReturn.BackgroundImage")));
-            this.btnReturn.ButtonText = "Return";
+            this.btnReturn.ButtonText = "Quay lại";
             this.btnReturn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnReturn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReturn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnReturn.ForeColor = System.Drawing.Color.White;
             this.btnReturn.IdleBorderThickness = 1;
             this.btnReturn.IdleCornerRadius = 5;
@@ -270,6 +266,11 @@
             this.btnReturn.TabIndex = 15;
             this.btnReturn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
+            // 
+            // beReg1
+            // 
+            this.beReg1.ElipseRadius = 15;
+            this.beReg1.TargetControl = this;
             // 
             // frmRegister_1
             // 
@@ -299,7 +300,7 @@
         private Bunifu.Framework.UI.BunifuThinButton2 btnContinue;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        private Bunifu.Framework.UI.BunifuElipse beReg1;
         private Bunifu.Framework.UI.BunifuThinButton2 btnReturn;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtPassword;
     }

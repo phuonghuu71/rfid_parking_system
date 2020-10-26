@@ -36,10 +36,14 @@ namespace Ticket
             {
                 btnAdmin.Visible = false;
             }
+
+            pbProfile.Image = GetStaffInfo.ProfilePic;
+            lbFullname.Text = GetStaffInfo.Fullname;
         }
 
         private void frmTicketIn_Load(object sender, EventArgs e)
         {
+
 
             bwTicketIn.WorkerReportsProgress = true;
             bwTicketIn.WorkerSupportsCancellation = true;
@@ -330,18 +334,12 @@ namespace Ticket
 
         private void btnAdmin_Click(object sender, EventArgs e)
         {
-            bwTicketIn.CancelAsync();
-            if(GetStaffInfo.Type.Equals("admin") == true)
-            {
-                frmAdmin df = new frmAdmin(GetStaffInfo);
-                this.Hide();
-                df.ShowDialog();
-                this.Close();
-            }
-            else
-            {
-                MessageBox.Show("Chỉ có admin mới được vào", "Thông báo");
-            }
+        //  bwTicketIn.CancelAsync();
+        //  if(GetStaffInfo.Type.Equals("admin") == true)
+            frmAdmin df = new frmAdmin(GetStaffInfo);
+            this.Hide();
+            df.ShowDialog();
+            this.Close();
         }
 
         private void btnExit_Click(object sender, EventArgs e)

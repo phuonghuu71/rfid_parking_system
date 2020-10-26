@@ -195,15 +195,20 @@ namespace Ticket
         }
         void LoadListStaff()
         {
-
-
             staffList.DataSource = StaffDAL.Instance.getStaffList();
+
+            
             this.dtgvStaff.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             this.dtgvStaff.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             this.dtgvStaff.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            this.dtgvStaff.Columns[0].HeaderText = "username";
-            this.dtgvStaff.Columns[1].HeaderText = "password";
-            this.dtgvStaff.Columns[2].HeaderText = "type";
+            this.dtgvStaff.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            this.dtgvStaff.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            this.dtgvStaff.Columns[0].HeaderText = "Username";
+            this.dtgvStaff.Columns[1].HeaderText = "Password";
+            this.dtgvStaff.Columns[2].HeaderText = "Type";
+            this.dtgvStaff.Columns[3].HeaderText = "Fullname";
+            this.dtgvStaff.Columns[4].HeaderText = "Gender";
+            
 
 
         }
@@ -371,11 +376,13 @@ namespace Ticket
         //switch to main interface
         private void btnSwitch_Click(object sender, EventArgs e)
         {
+            /*
             if(bwInsertUser.IsBusy == true) {
                 bwInsertUser.CancelAsync();
             }
-            frmTicketIn df = new frmTicketIn(GetStaffInfo);
+            */
             this.Hide();
+            frmTicketIn df = new frmTicketIn(GetStaffInfo);
             df.ShowDialog();
             this.Close();
         }
@@ -420,7 +427,7 @@ namespace Ticket
             else
             if (pwd != "" && type != "")
             {
-                Staff staff = new Staff(username, (pwd), type);
+                Staff staff = new Staff(username, (pwd), type, null, null, null);
                 StaffDAL.Instance.addtoStaffDB(staff);
                 MessageBox.Show("Thêm tài khoản thành công", "Thành công");
                 LoadListStaff();
@@ -449,7 +456,8 @@ namespace Ticket
         private void btnDeleteUser_Click(object sender, EventArgs e)
         {
             string username = txtUsername.Text;
-            if (adminCount() == 1)
+            Staff staff = StaffDAL.Instance.getStaffByID(username);
+            if (adminCount() == 1 && staff.Username == "admin")
             {
                 MessageBox.Show("Đây là tài khoản admin duy nhất, không thể xóa", "Lỗi");
             }
@@ -481,8 +489,7 @@ namespace Ticket
             else
             if (pwd != "" && type != "")
             {
-                Staff staff = new Staff(username, (pwd), type);
-                StaffDAL.Instance.updateStaffByID(staff);
+                StaffDAL.Instance.changepwdByID(username, pwd);
                 MessageBox.Show("Sửa tài khoản thành công", "Thành công");
                 LoadListStaff();
             }
