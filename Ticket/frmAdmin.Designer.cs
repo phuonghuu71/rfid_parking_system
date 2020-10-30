@@ -90,6 +90,9 @@
             this.beUser = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.beStatistical = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.beStaff = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.txtSum = new System.Windows.Forms.TextBox();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
@@ -112,6 +115,7 @@
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.tableLayoutPanel10.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // bwInsertUser
@@ -420,7 +424,7 @@
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 21F));
             this.tableLayoutPanel7.Controls.Add(this.dtpkSortByYear, 4, 1);
             this.tableLayoutPanel7.Controls.Add(this.dtpkSortByMonth, 3, 1);
             this.tableLayoutPanel7.Controls.Add(this.dtpkSortByDay, 2, 1);
@@ -432,6 +436,7 @@
             this.tableLayoutPanel7.Controls.Add(this.btnMonth, 3, 2);
             this.tableLayoutPanel7.Controls.Add(this.btnYear, 4, 2);
             this.tableLayoutPanel7.Controls.Add(this.btnRefresh, 3, 0);
+            this.tableLayoutPanel7.Controls.Add(this.panel6, 1, 2);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
@@ -1005,6 +1010,35 @@
             this.beStaff.ElipseRadius = 15;
             this.beStaff.TargetControl = this.dtgvStaff;
             // 
+            // txtSum
+            // 
+            this.txtSum.Font = new System.Drawing.Font("Arial", 16.2F);
+            this.txtSum.Location = new System.Drawing.Point(176, 19);
+            this.txtSum.Name = "txtSum";
+            this.txtSum.Size = new System.Drawing.Size(331, 39);
+            this.txtSum.TabIndex = 8;
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.label11);
+            this.panel6.Controls.Add(this.txtSum);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel6.Location = new System.Drawing.Point(23, 183);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(612, 84);
+            this.panel6.TabIndex = 32;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Arial", 16.2F);
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(15, 22);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(155, 32);
+            this.label11.TabIndex = 9;
+            this.label11.Text = "Tổng cộng:";
+            // 
             // frmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1046,6 +1080,8 @@
             this.tabPage3.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
             this.tableLayoutPanel10.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1111,5 +1147,8 @@
         private Bunifu.Framework.UI.BunifuThinButton2 btnDeleteUser;
         private Bunifu.Framework.UI.BunifuThinButton2 btnEditUser;
         private Bunifu.Framework.UI.BunifuThinButton2 btnAddUser;
+        private System.Windows.Forms.TextBox txtSum;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label label11;
     }
 }

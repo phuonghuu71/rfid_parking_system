@@ -244,31 +244,55 @@ namespace Ticket
 
             customStatisgv();
 
+            double sum = 0;
 
+            List<Statistical> getStatis = GuestDAL.Instance.getStatisticalDBByDate(dtpFrom.Value.ToString("yyyy-M-dd"), dtpTo.Value.ToString("yyyy-M-dd"));
+            for (int i = 0; i < getStatis.Count; i++)
+            {
+                sum += getStatis[i].Money;
+            }
+            txtSum.Text = sum.ToString();
         }
         void LoadListStatisByDay()
         {
 
+            double sum = 0;
 
             statisList.DataSource = GuestDAL.Instance.getStatisticalDBByDay(dtpkSortByDay.Value.Day.ToString(), dtpkSortByMonth.Value.Month.ToString(), dtpkSortByYear.Value.Year.ToString());
-
+            List<Statistical> getStatis = GuestDAL.Instance.getStatisticalDBByDay(dtpkSortByDay.Value.Day.ToString(), dtpkSortByMonth.Value.Month.ToString(), dtpkSortByYear.Value.Year.ToString());
+            for(int i=0;i<getStatis.Count;i++)
+            {
+                sum += getStatis[i].Money;
+            }
+            txtSum.Text = sum.ToString();
 
         }
         void LoadListStatisByMonth()
         {
-
+            double sum = 0;
 
             statisList.DataSource = GuestDAL.Instance.getStatisticalDBByMonth(dtpkSortByMonth.Value.Month.ToString(), dtpkSortByYear.Value.Year.ToString());
 
+            List<Statistical> getStatis = GuestDAL.Instance.getStatisticalDBByMonth(dtpkSortByMonth.Value.Month.ToString(), dtpkSortByYear.Value.Year.ToString());
+            for (int i = 0; i < getStatis.Count; i++)
+            {
+                sum += getStatis[i].Money;
+            }
+            txtSum.Text = sum.ToString();
 
         }
         void LoadListStatisByYear()
         {
-
+            double sum = 0;
 
             statisList.DataSource = GuestDAL.Instance.getStatisticalDBByYear(dtpkSortByYear.Value.Year.ToString());
 
-
+            List<Statistical> getStatis = GuestDAL.Instance.getStatisticalDBByYear(dtpkSortByYear.Value.Year.ToString());
+            for (int i = 0; i < getStatis.Count; i++)
+            {
+                sum += getStatis[i].Money;
+            }
+            txtSum.Text = sum.ToString();
         }
         void customStatisgv()
         {
@@ -384,7 +408,7 @@ namespace Ticket
             this.Hide();
             frmTicketIn df = new frmTicketIn(GetStaffInfo);
             df.ShowDialog();
-            this.Close();
+            //this.Close();
         }
         //refresh the current data
         private void btnRefresh_Click(object sender, EventArgs e)

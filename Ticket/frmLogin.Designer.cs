@@ -137,7 +137,7 @@
             this.btnRegister.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(177)))), ((int)(((byte)(138)))));
             this.btnRegister.IdleForecolor = System.Drawing.Color.White;
             this.btnRegister.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(177)))), ((int)(((byte)(138)))));
-            this.btnRegister.Location = new System.Drawing.Point(60, 348);
+            this.btnRegister.Location = new System.Drawing.Point(60, 400);
             this.btnRegister.Margin = new System.Windows.Forms.Padding(5);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(400, 60);
@@ -163,7 +163,7 @@
             this.btnExit.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(177)))), ((int)(((byte)(138)))));
             this.btnExit.IdleForecolor = System.Drawing.Color.White;
             this.btnExit.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(177)))), ((int)(((byte)(138)))));
-            this.btnExit.Location = new System.Drawing.Point(60, 418);
+            this.btnExit.Location = new System.Drawing.Point(60, 500);
             this.btnExit.Margin = new System.Windows.Forms.Padding(5);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(400, 60);
@@ -189,7 +189,7 @@
             this.btnLogin.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(177)))), ((int)(((byte)(138)))));
             this.btnLogin.IdleForecolor = System.Drawing.Color.White;
             this.btnLogin.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(177)))), ((int)(((byte)(138)))));
-            this.btnLogin.Location = new System.Drawing.Point(60, 278);
+            this.btnLogin.Location = new System.Drawing.Point(60, 300);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(5);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(400, 60);

@@ -334,12 +334,12 @@ namespace Ticket
 
         private void btnAdmin_Click(object sender, EventArgs e)
         {
-        //  bwTicketIn.CancelAsync();
-        //  if(GetStaffInfo.Type.Equals("admin") == true)
-            frmAdmin df = new frmAdmin(GetStaffInfo);
+            //  bwTicketIn.CancelAsync();
+            //  if(GetStaffInfo.Type.Equals("admin") == true)
             this.Hide();
+            frmAdmin df = new frmAdmin(GetStaffInfo);
             df.ShowDialog();
-            this.Close();
+           //this.Close();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -347,7 +347,7 @@ namespace Ticket
             this.Hide();
             frmLogin df = new frmLogin();
             df.ShowDialog();
-            this.Close();
+            //this.Close();
         }
 
         #endregion
